@@ -215,11 +215,6 @@ window.jQuery = window.$ = jquery;
     /**
      * Animate scroll
      */
-    ScrollReveal().reveal('.intro-item', {
-        origin: 'left',
-        delay: 400,
-        distance: '300px',
-    });
     ScrollReveal().reveal('.intro-image', {
         origin: 'right',
         delay: 400,
