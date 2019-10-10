@@ -1,0 +1,21 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: $headings-font-weight;
+  font-size: .875rem;
+  text-transform: uppercase;
+  transition: .5s;
+  z-index: 5;
+
+  &-primary {
+
+    &:hover {
+      background: #141518;
+      color: $primary;
+      border-color: #141518;
+    }
+  }
+}

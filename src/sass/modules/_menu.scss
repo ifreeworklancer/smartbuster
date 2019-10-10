@@ -1,0 +1,119 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 575px;
+  background: #202328;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+  transform: translateX(-100%);
+  transition: .5s;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: url('../images/bg/decor-menu-bg.png') 50% 50% /cover no-repeat;
+    z-index: -2;
+  }
+
+  &-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #373B43;
+
+    .menu-buy {
+      span {
+        margin-right: 15px;
+        font-size: .75rem;
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+          margin-right: 20px;
+          font-size: 1rem;
+        }
+
+        span {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-nav {
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      li {
+        position: relative;
+        padding: 0 25px;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        transition: .5s;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          padding: 0 35px;
+          font-size: 1.25rem;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 5px;
+          height: 0;
+          background: $primary;
+          transition: .5s;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+
+        &:hover {
+          color: #7C7C7C;
+
+          &::before,
+          &::after {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-mask {
+  @extend %pos;
+  position: fixed;
+  width: 100%;
+  background: rgba(7, 7, 7, 0.9);
+  z-index: 149;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

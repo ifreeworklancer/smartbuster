@@ -1,0 +1,67 @@
+#app-footer {
+  padding: 20px 0 0;
+  overflow: hidden;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 0;
+  }
+
+  .sponsor-logo {
+    max-width: 200px;
+  }
+
+  .copyright {
+    font-size: .875rem;
+
+    @media (min-width: map_get($grid-breakpoints, xxl)) {
+      font-size: 1rem;
+    }
+  }
+
+  .languages-menu {
+    z-index: 5;
+  }
+
+  .footer-buy {
+    position: relative;
+    display: flex;
+    background: #111215;
+    padding: 20px 0 20px 15px;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: auto;
+      margin-left: 20px;
+    }
+
+
+    @media (min-width: map_get($grid-breakpoints, xxl)) {
+      padding: 20px 0 20px 40px;
+    }
+
+    &::before {
+      content: '';
+      @extend %pos;
+      right: -999px;
+      background: #111215;
+      border-radius: 5px 5px 0 0;
+      z-index: -2;
+    }
+
+    span {
+      margin-right: 15px;
+      font-size: .75rem;
+      white-space: nowrap;
+
+      @media (min-width: map_get($grid-breakpoints, xxl)) {
+        margin-right: 20px;
+        font-size: 1rem;
+      }
+
+      span {
+        margin-right: 0;
+      }
+    }
+  }
+}

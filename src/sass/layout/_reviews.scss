@@ -1,0 +1,124 @@
+#reviews {
+  padding: 100px 0;
+  background: $primary;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .reviews-item {
+
+    .custom-tabs {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        flex-direction: row;
+      }
+
+      &-body {
+        width: 100%;
+        max-width: 835px;
+        transition: .5s;
+
+        .reviews-description {
+          background: #fff;
+          padding: 25px;
+          color: $secondary;
+          border-bottom: 25px solid #E3E3E3;
+          border-radius: 5px;
+
+          @media (min-width: map_get($grid-breakpoints, lg)) {
+            padding: 35px 50px;
+          }
+
+          .description {
+            margin-top: 30px;
+          }
+
+          &__name {
+            font-weight: 900;
+            font-size: .75rem;
+            padding-right: 10px;
+            margin-right: 10px;
+            border-right: 1px solid $secondary;
+
+            @media (min-width: map_get($grid-breakpoints, lg)) {
+              font-size: .875rem;
+              padding-right: 25px;
+              margin-right: 25px;
+            }
+          }
+
+          &__date {
+            font-weight: 900;
+            font-size: .875rem;
+            color: $primary;
+          }
+        }
+      }
+
+      &-nav {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 30px;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          margin-bottom: 0;
+        }
+
+        &-item {
+
+          &.active {
+
+            .reviews-author {
+
+              &__image {
+                width: 65px;
+                height: 65px;
+
+                &::before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          .reviews-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            &__image {
+              position: relative;
+              @extend %img;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-right: 20px;
+              transition: .5s;
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                border: 2px solid #FFFFFF;
+                border-radius: 50%;
+                opacity: 0;
+                transition: .5s;
+              }
+            }
+
+            &__name {
+              font-size: 1.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

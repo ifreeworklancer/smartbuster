@@ -1,0 +1,76 @@
+.form-group {
+    position: relative;
+    padding: 10px 15px 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid $light;
+    transition: .5s;
+
+    label {
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+        font-size: .875rem;
+        font-weight: 900;
+        color: $light;
+        transition: .5s;
+    }
+
+    .form-control {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        border: none;
+        color: #fff;
+    }
+
+    &.in-focus {
+        border-color: $primary;
+
+        label {
+            color: #fff;
+            bottom: 65%;
+            font-size: .75rem;
+        }
+    }
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-group {
+        width: 100%;
+        margin: 0 auto 30px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 30%;
+            margin: 0;
+        }
+
+        .btn {
+            height: 100%;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                padding: 0 $btn-padding-x;
+            }
+        }
+    }
+}
+
+.form-column {
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &--min {
+        max-width: 315px;
+    }
+}

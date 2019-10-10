@@ -1,0 +1,42 @@
+$light: #999999;
+$primary: #50B237;
+$primary-200: #7DDC66;
+$dark: #202328;
+$secondary: #333333;
+$danger: #CC0F0F;
+
+$body-color: #fff;
+$body-bg: #17191C;
+
+$font-size-base: 1rem;
+$font-family-base: 'Proxima Nova', sans-serif;
+$headings-font-family: 'Proxima Nova', sans-serif;
+$headings-font-weight: 900;
+
+$link-color: #fff;
+$link-hover-decoration: none;
+$input-btn-focus-width: 0;
+$input-btn-focus-color: rgba(#fff, 0);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+$border-width: 1px;
+
+$border-radius: 3px;
+$btn-padding-x: 20px;
+$btn-padding-y: 15px;
+
+$h1-font-size: $font-size-base * 3.125;
+$h2-font-size: $font-size-base * 2.75;
+$h3-font-size: $font-size-base * 2;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base * 1.125;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1360px,
+);

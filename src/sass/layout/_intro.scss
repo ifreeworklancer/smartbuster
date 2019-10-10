@@ -1,0 +1,100 @@
+#intro {
+  padding: 150px 0 30px;
+
+  @media (min-width: map_get($grid-breakpoints, xxl)) {
+    padding: 150px 0 600px;
+  }
+
+  &::before {
+    content: '';
+    @extend %pos;
+    bottom: 70%;
+    background: url('../images/bg/decor-intro-bg.png') 50% 50% /cover no-repeat;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      height: 500px;
+    }
+  }
+
+  .intro-item {
+
+    .section-description {
+
+      .title {
+        font-size: 1.75rem;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          font-size: 2.3rem;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+          font-size: $h2-font-size;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xxl)) {
+          font-size: $h1-font-size;
+        }
+      }
+    }
+
+    .intro-buy {
+      position: relative;
+      margin-top: 40px;
+      padding: 50px 40px;
+      border-top: 2px solid $primary;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        max-width: 450px;
+      }
+
+      &-text {
+
+        &__title {
+          font-size: .875rem;
+          margin-right: 10px;
+        }
+
+        &__value {
+          font-size: $h5-font-size;
+
+          @media (min-width: map_get($grid-breakpoints, xl)) {
+            font-size: $h4-font-size;
+          }
+        }
+      }
+
+      &::before {
+        content: '';
+        @extend %pos;
+        bottom: -2000px;
+        background: #1A1C21;
+        z-index: -2;
+      }
+    }
+  }
+
+  .intro-image {
+    position: relative;
+    @extend %img;
+    background-size: contain;
+    height: 220px;
+    z-index: 15;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      height: 260px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      height: 350px;
+    }
+  }
+
+  .image-bg {
+    @extend %pos;
+
+    @media (min-width: map_get($grid-breakpoints, xxl)) {
+      background: url('../images/bg/intro-bg.png') 100% 0% /cover no-repeat;
+    }
+  }
+}

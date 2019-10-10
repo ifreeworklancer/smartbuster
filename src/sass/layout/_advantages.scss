@@ -1,0 +1,80 @@
+#advantages {
+  padding: 130px 0 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 315px;
+    height: 280px;
+    background: $primary;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      height: 370px;
+    }
+
+  }
+
+  .section-title {
+    margin-bottom: 120px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-bottom: 0;
+    }
+  }
+
+  .decor-bg {
+    @extend %pos;
+    left: 5%;
+    right: 5%;
+    z-index: -2;
+    background: url('../images/bg/decor-advantages-bg.png') 50% 50% /cover no-repeat;
+  }
+
+  .advantages-image {
+    @extend %img;
+    margin: 0 auto 120px;
+    width: 190px;
+    height: 410px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin: 0 auto;
+      width: 232px;
+      height: 493px;
+    }
+  }
+
+  .advantages-list {
+
+    &-item {
+      position: relative;
+      text-align: center;
+      margin-bottom: 110px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        min-height: 200px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        font-size: $h5-font-size;
+      }
+
+      .icon {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.page {
+  z-index: 5;
+
+  &-secondary {
+    height: 100vh;
+    @extend %img;
+
+    .decor-bg {
+      @extend %pos;
+      background: url('../images/bg/decor-feature-bg.png') 100% 0% /cover no-repeat;
+      z-index: -2;
+    }
+
+    &::before {
+      content: '';
+      @extend %pos;
+      background: url('../images/bg/feature-bg.png') 100% 0% /cover no-repeat;
+      z-index: -2;
+    }
+
+    .page-secondary-item {
+      text-align: center;
+
+      .title {
+        margin-bottom: 15px;
+      }
+
+      .page-subtitle {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.section-description {
+  position: relative;
+  z-index: 10;
+
+  .subtitle {
+    position: relative;
+    padding-left: 90px;
+    color: $primary;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      padding-left: 120px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xxl)) {
+      font-size: $h5-font-size;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background: $primary;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        width: 80px;
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 15px;
+  }
+
+  .description {
+    color: $light;
+
+    @media (min-width: map_get($grid-breakpoints, xxl)) {
+      font-size: $h5-font-size;
+    }
+  }
+}
