@@ -219,6 +219,7 @@ window.jQuery = window.$ = jquery;
         origin: 'right',
         delay: 400,
         distance: '300px',
+        mobile: false
     });
     ScrollReveal().reveal('.about-item', {
         origin: 'bottom',
@@ -241,6 +242,7 @@ window.jQuery = window.$ = jquery;
         origin: 'right',
         delay: 400,
         distance: '300px',
-        interval: 80
+        interval: 80,
+        mobile: false
     });
 })(jQuery);
