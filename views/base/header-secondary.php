@@ -84,13 +84,13 @@
                     <div class="line line--top"></div>
                     <div class="line line--bottom"></div>
                 </div>
-                <div class="languages-menu">
-                    <?php if ($locale == 'ua') : ?>
-                        <a href="<?php echo url() . '?' . http_build_query(['hl' => 'ru']) ?>">ru</a>
-                    <?php else : ?>
-                        <a href="<?php echo url() . '?' . http_build_query(['hl' => 'ua']) ?>">ua</a>
-                    <?php endif; ?>
-                </div>
+<!--                <div class="languages-menu">-->
+<!--                    --><?php //if ($locale == 'ua') : ?>
+<!--                        <a href="--><?php //echo url() . '?' . http_build_query(['hl' => 'ru']) ?><!--">ru</a>-->
+<!--                    --><?php //else : ?>
+<!--                        <a href="--><?php //echo url() . '?' . http_build_query(['hl' => 'ua']) ?><!--">ua</a>-->
+<!--                    --><?php //endif; ?>
+<!--                </div>-->
             </div>
             <div class="col text-lg-center">
                 <a href="/" class="logo">
